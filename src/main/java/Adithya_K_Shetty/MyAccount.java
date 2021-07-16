@@ -3,15 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Adithya_K_Shetty;
+package Adithya_K_Shetty;//USER DEFINED PACKAGES
 
+//IMPORTING STANDARD PACKAGES (LINE:8-14)
 import javax.swing.*;        
 import java.awt.event.*;
 import java.awt.Color;
 import javax.swing.border.Border;
 import java.awt.Font;
 import javax.swing.border.LineBorder;
-
+//IMPORTING USER-DEFINED PACKAGE 
 import Ashwin_R_Prabhu.*;
 
 
@@ -19,7 +20,9 @@ import Ashwin_R_Prabhu.*;
  *
  * @author Adithya K Shetty 4SO19CS007
  */
+//ACCOUNT CLASS
 public class MyAccount {
+    //JFRAME
     static JFrame myAccount;
     
     static JLabel second = new JLabel();
@@ -30,18 +33,25 @@ public class MyAccount {
     JTextArea chatArea;
     JTextField textBox;
     JScrollPane scrBar;
+    
     JButton resetPassword = new JButton("🔑 RESET PASSWORD");
     JButton btnBack = new JButton("🏠 HOME");
+    
+    //VARIBLE DEFINATIONS FOR TIMER
     public static long starttime,elapsetime,second2;
     static long minute1,second1;
     static int i,j;
+    
     int flag=0;
+    
+    //COLOURS
     Color c1 = new  Color(0,152,152); Color c2 = new Color(0,90,90);
     Color c3 = new Color(230,230,230);
-    
     Color borderCol = new Color(0,90,90);
     Border border =  new LineBorder(borderCol, 2, true);
-   public static void timerInit()
+    
+    
+    public static void timerInit()
     {
         starttime=System.currentTimeMillis();
         elapsetime=0;
@@ -52,6 +62,7 @@ public class MyAccount {
         minute.setText("00:");
         second.setText("00");
     }
+    //FUNCTION USED TO DISPLAY TIMER IN ACCOUNT SECTION (LINE:65 - 95)
     public static void timer()
     {        
         starttime=System.currentTimeMillis();
@@ -82,43 +93,46 @@ public class MyAccount {
              
         }
     }
-    
+    // FUCTION USED FOR CHAT BOT APPLICATION (LINE:96-357)
     public void chatBot()
     {
         
-        
+        //LABEL1 USED WITH CHAT BOT (ON HOVER)
         JLabel help = new JLabel(" Need help? Ask ivA");
         help.setBounds(1225,440,210,30);
         help.setOpaque(true);
         help.setBackground(c1);
         help.setFont(new Font("",Font.BOLD,20));
-        help.setForeground(Color.white);        
+        help.setForeground(Color.white);
         
+        //LABEL2 USED WITH CHAT BOT
         JLabel ringLogo2 = new JLabel("Help");
         ringLogo2.setBounds(1443,401,440,100);
         ringLogo2.setFont(new Font("",Font.BOLD,16));
         ringLogo2.setForeground(Color.white);
         myAccount.add(ringLogo2);
         
+        //LABEL3 USED WITH CHAT BOT
         JLabel ringLogo1 = new JLabel("💬");
         ringLogo1.setBounds(1434,405,440,100);
         ringLogo1.setFont(new Font("",Font.BOLD,50));
         ringLogo1.setForeground(c2);
         myAccount.add(ringLogo1);
         
+        //LABEL3 USED WITH CHAT BOT
         JLabel ringLogo = new JLabel("⚫");
         ringLogo.setBounds(1415,385,140,140);
         ringLogo.setFont(new Font("",Font.BOLD,100));
         ringLogo.setForeground(c1);
         myAccount.add(ringLogo);
         
-        
+        //LABEL4 USED WITH CHAT BOT
         JLabel avi = new JLabel("🤖 I am ivA, how may I help you? ");
         avi.setBounds(1150,110,400,30);
         avi.setFont(new Font("",Font.BOLD,16));
         avi.setForeground(Color.white);
        
-        
+        //CHAT AREA WHICH USED TO COMMUNICATE WITH IVA
         chatArea = new JTextArea();
         chatArea.setBounds(1130,128,300,300);
         chatArea.setBorder(border);
@@ -129,19 +143,20 @@ public class MyAccount {
         scrBar = new JScrollPane(chatArea , JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED , JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
         scrBar.setBounds(1125 , 140 , 300 , 250);
         
-        
-        /*JLabel starterMessage = new JLabel("Chat here....");
+        //STARTER MESSAGE ON TEXT BOX
+        JLabel starterMessage = new JLabel("Chat here....");
         starterMessage.setBounds(1130,400,200,40);
-        starterMessage.setFont(new Font("",Font.PLAIN,20));*/
+        starterMessage.setFont(new Font("",Font.PLAIN,20));
         
-        
-        textBox = new JTextField("  Chat here...");
+        //TEXTBOX TO ENTER CHAT
+        textBox = new JTextField("    ");
         textBox.setBounds(1125,395,300,50);
         Border borderTest =  new LineBorder( borderCol, 4, true);
         //textBox.setBackground(Color.white);
         textBox.setBorder(borderTest);
         textBox.setFont(new Font("",Font.PLAIN,18));
         
+         //MOUSELISTENER1 USED TO REMOVE STARTER MESSAGE
          textBox.addMouseListener(new MouseAdapter(){
           public void mouseClicked (MouseEvent evt) 
           {
@@ -161,7 +176,7 @@ public class MyAccount {
         Chat.setOpaque(false);
         Chat.setBounds(1437,435,43,45);
         myAccount.add(Chat);
-        
+        //MOUSE LISTENER2
          Chat.addMouseListener(new MouseAdapter(){
           public void mouseEntered(MouseEvent evt) 
           {
@@ -183,7 +198,7 @@ public class MyAccount {
         
          
         
-        
+        //ACTION LISTENER USED TO DISPLAY THE CHAT BOT(IVA)
          Chat.addActionListener(new ActionListener(){
            public void actionPerformed(ActionEvent e)
            {
@@ -191,7 +206,7 @@ public class MyAccount {
                   myAccount.remove(help);
                   myAccount.remove(Chat);
                   myAccount.add(avi);
-                  //myAccount.add(starterMessage);
+                  myAccount.add(starterMessage);
                   myAccount.add(textBox);                  
                   myAccount.add(scrBar);                  
                   myAccount.add(ChatBack);
@@ -199,13 +214,14 @@ public class MyAccount {
                   myAccount.repaint();                
            }
        });
+       //ACTION LISTENER WHICH REMOVES THE CHAT BOT  
        Chat1.addActionListener(new ActionListener(){
            public void actionPerformed(ActionEvent e)
            {
                   myAccount.remove(Chat1);
                   myAccount.remove(ChatBack);
                   myAccount.remove(textBox);
-                  //myAccount.remove(starterMessage);
+                  myAccount.remove(starterMessage);
                   myAccount.remove(scrBar);
                   myAccount.remove(avi);
                   myAccount.add(Chat);
@@ -215,7 +231,7 @@ public class MyAccount {
        });
         
         
-        
+        //ACTION LISTENER WHICH MAKES THE AUTOMATION OF CHATS AND REPLYS
         textBox.addActionListener(new ActionListener(){
            public void actionPerformed (ActionEvent e)
            {
@@ -225,12 +241,13 @@ public class MyAccount {
                if(!(inputText.equals("")))
                chatArea.append("👤: "+inputTextDisplay+"\n");
                textBox.setText("");
+               //HARDCODED CHATS (LINE:244-356)
                if(inputText.contains("hi")
                        ||inputText.contains("hello")
                        ||inputText.contains("hey")
                        ||inputText.contains("namasthe")
-                       ||inputText.contains("hi avi")
-                       ||inputText.contains("hey avi")
+                       ||inputText.contains("hi iva")
+                       ||inputText.contains("hey iva")
                        ||inputText.contains("yo"))
                {
                    ++flag;
@@ -249,7 +266,7 @@ public class MyAccount {
                  {
                    try
                     {
-                      Bot("Hello I am avi, how can I help you"); 
+                      Bot("Hello I am iva, how can I help you"); 
                     }
                     catch(Exception ex)
                     {
@@ -302,7 +319,7 @@ public class MyAccount {
                {
                    try
                    {
-                       Bot("Bodda Sheera");
+                       Bot("Try Creating a new Account Maybe");
                    }
                    catch(Exception ex)
                    {
@@ -344,17 +361,19 @@ public class MyAccount {
            }
         });
     }
+    //FUNCTION WHICH APPENDS MESSAGE TO CHAT AREA
     public void Bot(String message) throws Exception
     {
+        //.SLEEP() FUNCTION USED TO INTRDUCE SOME DELAY DURING THE RESPONSE
         Thread.sleep(200);
-        chatArea.append("🤖:    "+message+"\n");
+        chatArea.append("🤖: "+message+"\n");
     }
     
-    
+    //CONSTRUCTOR 
     public MyAccount()
     {
         
-        
+        //COLOURS USED IN ACCOUNT PAGE
         Color color = new Color(72, 245, 191);
         Color col = new Color(183, 139, 255);
         Color borderColorHover = new Color(255,255,255);
@@ -424,10 +443,6 @@ public class MyAccount {
         userLogo.setForeground(c2);
         myAccount.add(userLogo);
      
-       
-        
-        
-
         JLabel imgBackground = new JLabel();
         imgBackground.setBounds(570,130,350,350);
         imgBackground.setOpaque(true);
@@ -449,17 +464,9 @@ public class MyAccount {
         lineSeparator2.setOpaque(true);
         lineSeparator2.setBackground(c2);
         myAccount.add(lineSeparator2);
+       //END OF LINE SEPARATOR
         
-      
-             
-        
-        
-        
-        
-        
-        //END OF LINE SEPARATOR
-        
-        //USER INFO
+        //USER INFO   (LINE:473 - 546)
         JLabel userFName = new JLabel("FIRSTNAME :");
         userFName.setBounds(60,550,170,50);
         userFName.setFont(new Font("Bookman Old Style",Font.BOLD,22));
@@ -518,8 +525,6 @@ public class MyAccount {
         password .setForeground(c2);
         myAccount.add(password );
         
-       
-        
         JPasswordField passwordDisplay = new JPasswordField("  "+SignUp.pass);
         passwordDisplay.setBounds(840,700,260,50);
         passwordDisplay.setFont(new Font("Bookman Old Style",Font.BOLD,22));
@@ -527,42 +532,16 @@ public class MyAccount {
         passwordDisplay.setBorder(border);
         passwordDisplay.setEditable(false);
         myAccount.add(passwordDisplay);
-        
-        
-        
-        
-        
-        
-        
-       /*
-       JCheckBox showpasstxt = new JCheckBox("Show Password");
-       showpasstxt.setBounds(840,750,260,30);
-       showpasstxt.setFont(new Font("",Font.BOLD,14));
-       showpasstxt.setBackground(c3);
-       showpasstxt.setForeground(c2);
-       myAccount.add(showpasstxt);       
-        
-       showpasstxt.addActionListener(new ActionListener(){
-               public void actionPerformed(ActionEvent e){
-                   if (showpasstxt.isSelected()) {
-                   passwordDisplay.setEchoChar((char) 0);
-               } else {
-                   passwordDisplay.setEchoChar('•');
-               }
-
-
-           }
-           });*/
-        
-        
-        resetPassword.setBounds(1130,710,200,30);
+       
+        resetPassword.setBounds(1160,705,200,40);
         resetPassword.setFont(new Font("",Font.BOLD,16));
         resetPassword.setForeground(Color.white);
         resetPassword.setBackground(c1);
         resetPassword.setBorder(border);
         myAccount.add(resetPassword);
+       //END OF USER INFO
 
-
+       //ACTION LISTENER USED TO CALL RESET PASSWORD FRAME
         resetPassword.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e)
             {
@@ -618,8 +597,8 @@ public class MyAccount {
                 
       
         
-        //ANIMATIONS
-        
+      
+            //ANIMATIONS ON USER INFO
           userFNameDisplay.addMouseListener(new MouseAdapter(){
           public void mouseEntered (MouseEvent evt) 
           {
@@ -699,12 +678,6 @@ public class MyAccount {
               passwordDisplay.setForeground(c2);
           }
         });
-        
-        
-       
-        
-        
-        
         Border border3Hover =  new LineBorder(c2, 6, true);
         
         
@@ -718,11 +691,6 @@ public class MyAccount {
          userLogo.setBounds(610,190,280,300);
          userLogo.setFont(new Font("",Font.BOLD,270));
          userLogo.setForeground(borderColorHover);
-         
-         /*ringLogo.setBounds(600,90,440,440);
-         ringLogo.setFont(new Font("",Font.BOLD,360));
-         ringLogo.setForeground(col);*/
-         
          imgBackground.setBorder(border1Hover);
           
          }
@@ -730,12 +698,6 @@ public class MyAccount {
               userLogo.setBounds(620,200,280,280);
               userLogo.setFont(new Font("",Font.BOLD,250));
               userLogo.setForeground(c2);
-              
-              
-            /*  ringLogo.setBounds(600,90,440,440);
-              ringLogo.setFont(new Font("",Font.BOLD,350));
-              ringLogo.setForeground(col);*/
-             
              imgBackground.setBorder(border1);
          }
        });
@@ -756,18 +718,14 @@ public class MyAccount {
         myAccount.getContentPane().setBackground(c3);
         
         //END OF BACKGROUND
-        chatBot();
+        chatBot();//CALLING CHAT BOT FUNCTION
         myAccount.setVisible(true);
-         
-       
-        myAccount.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        
-        
+        myAccount.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);    
     }
    
     /*public static void main(String[] args)
     {
         new MyAccount();
-    }
-    */        
+    }*/
+            
 }

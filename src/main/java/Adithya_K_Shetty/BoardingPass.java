@@ -1,15 +1,13 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Adithya_K_Shetty;
 
+package Adithya_K_Shetty;//USER DEFINED PACKAGES
+
+//IMPORTING STANDARD PACKAGES
 import javax.swing.*;
 import java.awt.event.*;
 import javax.swing.border.*;
 import java.awt.*;
 
+//IMPORTING USER DEFINED PACKAGES
 import Ashwin_R_Prabhu.*;
 import Anston_P_Miranda.*;
 
@@ -61,7 +59,6 @@ public class BoardingPass
         
         //Action Listner for Home button that calls Homepage constructor       
         Home.addActionListener(new ActionListener(){
-            @Override
             public void actionPerformed(ActionEvent e)
             {
                 new HomePage();

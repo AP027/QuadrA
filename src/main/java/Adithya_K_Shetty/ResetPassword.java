@@ -3,16 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Adithya_K_Shetty;
+package Adithya_K_Shetty;//USER DEFINED PACKAGES
 
-
+//IMPORTING STANDARD PACKAGES (LINE:8-14)
 import java.awt.Color;
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.LineBorder;
 import java.awt.Font;
 import java.awt.event.*;
-
+//IMPORTING USER-DEFINED PACKAGES
 import Ashwin_R_Prabhu.SignUp;
 
 
@@ -20,26 +20,27 @@ import Ashwin_R_Prabhu.SignUp;
  *
  * @author Adithya K Shetty 4SO19CS007
  */
-public class ResetPassword// extends MyAccount
+//CLASS RESETPASSWORD
+public class ResetPassword
 {
     JFrame resetPass;
     JLabel invalid;
-    
+    //COLORS USED IN RESET PASSWORD FRAME
     Color borderCol = new Color(0,90,90);
     Color c3 = new Color(230,230,230);
     Color c2 = new Color(0,90,90);
-    
+    //DEFINING VARIABLES USED FOR THE FUNCTIONALITY 
     String oPassword,nPassword,cPassword;
+    //CONSTRUCTOR
     public ResetPassword()
     {
-        
-        
+        //LAYOUT USED FOR RESET PASSWORD (LINE:37-103)
         resetPass = new JFrame("Reset Password");
         resetPass.setLocation(500, 125);
         resetPass.setSize(500,400);
         resetPass.setLayout(null);
         resetPass.setAlwaysOnTop(true);
-        //resetPass.setLocationRelativeTo(null);
+        
         
         JLabel oldPassword = new JLabel("OLD PASSWORD         :");
         oldPassword.setBounds(30,40,250,30);
@@ -100,7 +101,8 @@ public class ResetPassword// extends MyAccount
        showpasstxt.setBackground(c3);
        showpasstxt.setForeground(c2);
        resetPass.add(showpasstxt);
-       
+       //END OF PASSWORD LAYOUT
+       //ACTION LISTENER USED FOR SHOWINF PASSWORD
        showpasstxt.addActionListener(new ActionListener(){
                public void actionPerformed(ActionEvent e){
                    if (showpasstxt.isSelected()) {
@@ -130,13 +132,15 @@ public class ResetPassword// extends MyAccount
            }
            });
         
-        //
+        
+        //SAVE BUTTON USED TO SAVE THE RESET PASSWORD 
         save.addActionListener(new ActionListener(){
            public void actionPerformed(ActionEvent e)
            {
               oPassword = oldPasswordInput.getText();
               nPassword = newPasswordInput.getText();
               cPassword = confirmPasswordInput.getText();
+              //ALL THE CONDITION USED WHILE RESETING PASSWORD (LINE : 144-192)
               if(oPassword.equals(SignUp.pass))
               {
                   if(nPassword.equals(""))
@@ -160,7 +164,10 @@ public class ResetPassword// extends MyAccount
                          if(nPassword.equals(cPassword))
                          {
                             SignUp.pass = cPassword;
-                        
+                            JLabel valid = new JLabel("Password successfully changed!!");
+                            valid.setForeground(Color.BLACK);
+                            valid.setFont(new Font("",Font.BOLD,18));
+                            JOptionPane.showMessageDialog(resetPass, valid,"Warning!",JOptionPane.INFORMATION_MESSAGE);
                             JFrame now=MyAccount.myAccount;                        
                             new MyAccount();
                             resetPass.dispose();
@@ -168,7 +175,7 @@ public class ResetPassword// extends MyAccount
                         }
                         else
                         {
-                           invalid = new JLabel("Confir Password Field Not Matching With New Passsword Field!!");
+                           invalid = new JLabel("Confirm Password Field Not Matching With New Passsword Field!!");
                            invalid.setForeground(Color.RED);
                            invalid.setFont(new Font("",Font.BOLD,18));
                            JOptionPane.showMessageDialog(resetPass, invalid,"Warning!",JOptionPane.WARNING_MESSAGE);
