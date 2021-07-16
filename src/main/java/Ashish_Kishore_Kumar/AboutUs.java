@@ -1,16 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Ashish_Kishore_Kumar;
+package Ashish_Kishore_Kumar;//USER DEFINED PACKAGES
 
-
+//Built-in Packages
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.Font;
 import java.awt.Color;
 
+//User-Defined Packages
 import Ashwin_R_Prabhu.HomePage;
 
 /**
@@ -33,6 +29,8 @@ public class AboutUs
        Color c2 = new Color(0,90,90);
        Color c3 = new Color(230,230,230);
 
+       
+    //Holds all the button present in the frame
     public void AllButton()
    {
        //Submit FeedBackButton
@@ -219,21 +217,14 @@ public class AboutUs
     lblFeedU.setOpaque(true);
     lblFeedU.setBackground(Color.black);
     frmAboutUs.add(lblFeedU);
-    
-    
+       
     //FeedBack text
     lblFeedT = new JLabel("You can give your Feedback regarding your experience with this app in the textbox below , feedback will help us rectify and improve the app!");
     lblFeedT.setBounds(100 , 520 , 2500 , 300);
     lblFeedT.setFont(new Font("Agency FB", Font.BOLD, 20));
     lblFeedT.setForeground(Color.BLACK);
     frmAboutUs.add(lblFeedT);
-    
-    /*Feedback TextBox
-    JLabel FeedbackText1 = new JLabel("Enter your FeedBack here....");    
-    FeedbackText1.setBounds(360 , 701 , 500 , 30);
-    FeedbackText1.setFont(new Font("Agency FB", Font.BOLD, 20));
-    frmAboutUs.add(FeedbackText1);*/
-    
+   
     //Feedback TextBox
     FeedbackText = new JTextArea("Enter your FeedBack here....",10,30);
     FeedbackText.setLineWrap(true);
@@ -242,26 +233,14 @@ public class AboutUs
     FeedbackText.setFont(new Font("Agency FB", Font.BOLD, 20));
     frmAboutUs.add(FeedbackText);
     
-    /*
-    FeedbackText.addMouseListener(new MouseAdapter() {
-         //*** USER LOGO ON HOVER ****
-         public void mouseClicked(MouseEvent evt) {
-             
-         frmAboutUs.remove(FeedbackText1);
-         frmAboutUs.repaint();
-          
-         }
-    });*/
-    
-    
    }
    
    
-   
+   //function that holds all the functionality of the action listeners
    public void AllActionListeners()
    {
       
-        //Go Back tp Home page
+        //Go Back to Home page
        Home.addActionListener(new ActionListener() 
         {
             public void actionPerformed(ActionEvent e)
@@ -279,19 +258,22 @@ public class AboutUs
         {
             public void actionPerformed(ActionEvent e)
             {
-                
+                //Checks of feedback is inputed
                 if(FeedbackText.getText().equals("Enter your FeedBack here....")||FeedbackText.getText().equals(""))
                 {
+                    //Shows error if feedback is not inputed
                     JOptionPane.showMessageDialog(frmAboutUs, "Please Enter a Appropriate feedback.", "ERROR" , 0);
                 }
                 else if(Editable == true)
                 {
+                    //Give message that feedback has been submitted and make the textbook uneditable
                     JOptionPane.showMessageDialog(frmAboutUs, "Your feedback has been submitted!!");
                     FeedbackText.setEditable(false);
                     Editable = false;
                 }
                 else
                 {
+                    //preventing the user to input another feedback
                     JOptionPane.showMessageDialog(frmAboutUs, "You have already Submitted your feedback!");
                 }
                 
@@ -306,9 +288,8 @@ public class AboutUs
    {
        frmAboutUs = new JFrame("About US");
        frmAboutUs.setExtendedState(JFrame.MAXIMIZED_BOTH);
-       //frmAboutUs.setResizable(false);
        
-       //Calling appropriate function to set up the frame      
+       //Calling appropriate functions to set up the frame      
        AllButton();
        AllLabels();       
        AllActionListeners();

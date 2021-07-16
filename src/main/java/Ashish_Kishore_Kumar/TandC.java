@@ -1,16 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Ashish_Kishore_Kumar;
+package Ashish_Kishore_Kumar;//USER DEFINED PACKAGES
 
-
+//Built-in Packages
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.Font;
 import java.awt.Color;
 
+//User-Defined Packages
 import Ashwin_R_Prabhu.HomePage;
 
 /**
@@ -94,7 +90,7 @@ public class TandC
     TandCH.setForeground(Color.BLACK);
     frmTandC.add(TandCH);
     
-    //Terma and Condition Underline
+    //Terms and Condition Underline
      TandCU = new JLabel();
     TandCU.setBounds(100 , 180 ,390 , 5);
     TandCU.setOpaque(true);
@@ -106,14 +102,11 @@ public class TandC
             + "your business and your users and customers. It serves to set out the rights and "
             + "responsibilities of both parties." +
             "<br/>In order to use your website, product, or mobile application, your users must "
-            + "agree to abide by your terms and conditions and to provide services as per the terms. </html>");
-            
+            + "agree to abide by your terms and conditions and to provide services as per the terms. </html>");         
     TandCT.setBounds(100 , 100 , 1200 , 300);
     TandCT.setFont(new Font("Agency FB", Font.BOLD, 20));
     TandCT.setForeground(Color.BLACK);
     frmTandC.add(TandCT);
-    
-    
     
     //Terms and condition Text Area
     ZaTandC = new JTextArea("Terms and Conditions\n"
@@ -151,6 +144,7 @@ public class TandC
             + "of information provided by Customer and the knowledge and cooperation of the agents, employees or subcontractors (\"Personnel\")"
             + " engaged or appointed by Customer who are selected by Customer to work with Seller.\n Seller will follow all reasonable Customer "
             + "security rules and procedures, as communicated in writing by Customer to Seller from time to time."
+            
             + "\n\nWarranty\n\n"
             + "Customer understands that Seller is not the manufacturer of the Products purchased by Customer hereunder and the only warranties "
             + "offered are those of the manufacturer, not Seller or its Affiliates. In purchasing the Products, Customer is relying on the "
@@ -172,61 +166,16 @@ public class TandC
             + "use of the Products. Customer further agrees to review and comply with the manufacture's disclaimers and restrictions regarding the use "
             + "of the Products in high risk environments.\n Seller warrants that the Services will be performed in a good and workmanlike manner. "
             + "Customer's sole and exclusive remedy and Seller's entire liability with respect to this warranty will be, at the sole option of Seller,"
-            + "Its Getting boring so time for some Barbie gril song Hiya, Barbie\n" 
-            +"Hi, Ken" 
-            +"You want to go for a ride?" 
-            +"Sure, Ken" 
-            +"Jump in" 
-            +"I'm a Barbie girl, in the Barbie world" 
-            +"Life in plastic, it's fantastic" 
-            +"You can brush my hair, undress me everywhere" 
-            +"Imagination, life is your creation" 
-            +"Come on, Barbie, let's go party"
-            +"I'm a Barbie girl, in the Barbie world" 
-            +"Life in plastic, it's fantastic" 
-            +"You can brush my hair, undress me everywhere" 
-            +"Imagination, life is your creation" 
-            +"I'm a blond bimbo girl in a fantasy world" 
-            +"Dress me up, make it tight, I'm your dolly" 
-            +"You're my doll, rock'n'roll, feel the glamour in pink" 
-            +"Kiss me here, touch me there, hanky panky"
-            +"You can touch" 
-            +"You can play" 
-            +"If you say, I'm always yours (ooh, oh)" 
-            +"I'm a Barbie girl, in the Barbie world" 
-            +"Life in plastic, it's fantastic" 
-            +"You can brush my hair, undress me everywhere"
-            +"Imagination, life is your creation" 
-            +"Come on, Barbie, let's go party (ah ah ah yeah)" 
-            +"Come on, Barbie, let's go party (ooh oh, ooh oh)"
-            +"Come on, Barbie, let's go party (ah ah ah yeah)" 
-            +"Come on, Barbie, let's go party (ooh oh, ooh oh)"
-            +"Make me walk, make me talk, do whatever you please" 
-            +"I can act like a star, I can beg on my knees" 
-            +"Come jump in, bimbo friend, let us do it again" 
-            +"Hit the town, fool around, let's go party" 
-            +"You can touch"
-            +"You can play"
-            +"If you say, I'm always yours" 
-            +"You can touch" 
-            +"You can play"
-            +"If you say, I'm always yours"
-            +"Come on, Barbie, let's go party (ah ah ah yeah)"
-            +"Come on, Barbie, let's go party (ooh oh, ooh oh)"
-            +"Come on, Barbie, let's go party (ah ah ah yeah)"
-            +"Come on, Barbie, let's go party (ooh oh, ooh oh)"
-            +"I'm a Barbie girl, in the Barbie world"
-            +"Life in plastic, it's fantastic"
-            +"You can brush my hair, undress me everywhere"
-            +"Imagination, life is your creation"
-            +"I'm a Barbie girl, in the Barbie world"
-            +"Life in plastic, it's fantastic"
-            +"You can brush my hair, undress me everywhere"
-            +"Imagination, life is your creation"
-            +"Come on, Barbie, let's go party (ah ah ah yeah)"
-            +"Oh, I'm having so much fun" 
-            +"Well, Barbie, we are just getting started"
-            +"Oh, I love you, Ken"
+            + "Its Getting boring so time for some Barbie gril song Hiya, Barbie Hi, Ken You want to go for a ride? Sure, Ken Jump in I'm a Barbie girl" 
+            +"Imagination, life is your creation Come on, Barbie, let's go party I'm a Barbie girl, in the Barbie world Life in plastic, it's fantastic" 
+            +"You can brush my hair, undress me everywhere Imagination, life is your creation I'm a blond bimbo girl in a fantasy world Dress me up, make it tight" 
+            +"You're my doll, rock'n'roll, feel the glamour in pink Kiss me here, touch me there, hanky panky You can touch You can pla If you say, I'm always yours" 
+            +"I'm a Barbie girl, in the Barbie world Life in plastic, it's fantastic You can brush my hair, undress me everywhere Imagination, life is your creation" 
+            +"Come on, Barbie, let's go party Come on, Barbie, let's go party Come on, Barbie, let's go party  Come on, Barbie, let's go party Make me walk" 
+            +"I can act like a star, I can beg on my knees Come jump in, bimbo friend, let us do it again Hit the town, fool around, let's go party" 
+            +"You can touch You can play If you say, I'm always yours You can touch You can play If you say, I'm always yours Life in plastic, it's fantastic"
+            +"You can brush my hair, undress me everywhere Imagination, life is your creation I'm a Barbie girl, in the Barbie world Life in plastic, it's fantastic"
+            +"You can brush my hair, undress me everywhere Imagination, life is your creation Come on, Barbie, let's go party Oh, I'm having so much fun Well"
             + " to either (a) use its reasonable commercial efforts to re-perform or cause to be re-performed any Services not in substantial compliance "
             + "with this warranty or (b) refund amounts paid by Customer related to the portion of the Services not in substantial compliance; provided, in"
             + " each case, Customer notifies Seller in writing within five (5) business days after performance of the applicable Services. EXCEPT AS SET FORTH "
@@ -247,6 +196,7 @@ public class TandC
             + "reasonable control, including, but not limited to, Product unavailability, carrier delays, delays due to fire, severe weather conditions, failure of power,"
             + " labor problems, acts of war, terrorism, embargo, acts of God or acts or laws of any government or agency. Any shipping dates or completion dates"
             + " provided by Seller or any purported deadlines contained in a Statement of Work or any other document are estimates only."
+            
             + "\n\nTermination\n\n"
             + "Either party may terminate performance of a Service or a Statement of Work for cause if the other party fails to cure a "
             + "material default in the time period specified herein. Any material default must be specifically identified in a written "
@@ -262,6 +212,7 @@ public class TandC
             + " for any right of action occurring prior to termination, payment obligations and obligations that expressly or by implication are"
             + " intended to survive termination (including, but not limited to, limitation of liability, indemnity, confidentiality, or licensing "
             + "of Work Product and this survival provision)."
+            
             + "\n\nAbritration\n\n"
             + "Any claim, dispute, or controversy (whether in contract, tort or otherwise, whether preexisting, present or "
             + "future, and including, but not limited to, statutory, common law, intentional tort and equitable claims) arising "
@@ -281,16 +232,16 @@ public class TandC
             + " The existence or results of any arbitration will be treated as confidential. Notwithstanding anything to the contrary contained"
             + " herein, all matters pertaining to the collection of amounts due to Seller arising out of the Products or Services will be exclusively "
             + "litigated in court rather than through arbitration." , 10 , 20);
+    
     scroll = new JScrollPane(ZaTandC , JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED , JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
     scroll.setBounds(400 , 350 , 500 , 300);
     ZaTandC.setFont(new Font("Agency FB", Font.BOLD, 15));
     ZaTandC.setLineWrap(true);
     ZaTandC.setWrapStyleWord(true);
-    frmTandC.add(scroll);
-    
-    
+    frmTandC.add(scroll);  
    }
-    
+   
+   //Holds all the button present in the frame
    public void AllButtons()
    {
        //A button to go home
@@ -309,34 +260,37 @@ public class TandC
         
    }
    
+    //function that holds all the functionality of the action listeners
    public void AllActionListener()
    {
+        //takes the user to the home page
         btnBak.addActionListener(new ActionListener() 
         {
             public void actionPerformed(ActionEvent e)
             {
+                //Takes the user to the homepage if the checkbox is selected
                 if(chkTandC.isSelected())
-                {
-                    
+                { 
                     new HomePage();
                     frmTandC.setVisible(false);
                 }
                 else
                 {
-                     JOptionPane.showMessageDialog(frmTandC, "Please read the Terms and Condition Before Proceeding", "ERROR" , 0);
-                }
-                 
+                    //If the user tries go back without clicking on the checkBox below the T%C
+                    JOptionPane.showMessageDialog(frmTandC, "Please read the Terms and Condition Before Proceeding", "ERROR" , 0);
+                }   
             }
         }
         );
    }
+   
     //Initializes the frame  
    public void DisplayFrame()
    {
     frmTandC = new JFrame("Terms and Conditions");
     frmTandC.setExtendedState(JFrame.MAXIMIZED_BOTH);
     
-    //Calling appropriate function to set up the frame
+    //Calling appropriate functions to set up the frame
     AllLabels();
     AllButtons();
     AllActionListener();
@@ -351,10 +305,7 @@ public class TandC
  //Function called by the actionListener in HomePage   
    public void ShowTandC()
    {  
-    DisplayFrame();
-   }
-   
-   
-   
+       DisplayFrame();
+   }  
    
 }

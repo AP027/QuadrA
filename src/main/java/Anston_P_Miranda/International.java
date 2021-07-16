@@ -1,12 +1,14 @@
 
-package Anston_P_Miranda;
+package Anston_P_Miranda;//USER DEFINED PACKAGES
 
 
-import Ashwin_R_Prabhu.HomePage;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.Random;
 import javax.swing.*;
+
+//IMPORTING USER DEFINED PACKAGES
+import Ashwin_R_Prabhu.HomePage;
 
 /**
  *
@@ -65,7 +67,6 @@ public class International extends Flight
        
         //Search button action listener
         btnSearch.addActionListener(new ActionListener(){
-            @Override
             public void actionPerformed(ActionEvent e)
             {
                 if(cmbcities.getSelectedIndex()==cmbDcities.getSelectedIndex())
@@ -100,7 +101,6 @@ public class International extends Flight
 
         //Reset search action listener
          Res.addActionListener(new ActionListener(){
-            @Override
             public void actionPerformed(ActionEvent e)
             {
                Booking.setVisible(false);
@@ -160,7 +160,6 @@ public class International extends Flight
 
             //Try again action listener
             btnTry.addActionListener(new ActionListener(){
-            @Override
             public void actionPerformed(ActionEvent e)
             {
                 Booking.remove(btnTry);

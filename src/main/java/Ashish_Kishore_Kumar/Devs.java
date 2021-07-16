@@ -1,16 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package Ashish_Kishore_Kumar;
+package Ashish_Kishore_Kumar;//USER DEFINED PACKAGES
 
-
+//Built-in Packages
 import javax.swing.*;
 import java.awt.event.*;
 import java.awt.Font;
 import java.awt.Color;
 
+//User-Defined Packages
 import Ashwin_R_Prabhu.HomePage;
 
 /**
@@ -21,8 +17,10 @@ public class Devs
 {
     //Public Variables
     JFrame Devs;
-    JLabel Cname , Header , MeetH , MeetU , MeetT ,ADI , APM , AKK , ARP ,HorDIv , VerDiv,VerDiv1,VerDiv2;
+    JLabel Cname , Header , MeetH , MeetU , MeetT , ADI , APM , AKK , ARP , HorDIv , VerDiv , VerDiv1 , VerDiv2;
     JButton btnBack;
+    
+    //Color
     Color c1 =new Color(0,152,152);
     Color c2 =new Color(0,90,90);
     Color c3 =new Color(230,230,230);
@@ -45,7 +43,6 @@ public class Devs
         Cname3.setFont(new Font("",Font.BOLD,30));
         Devs.add(Cname3); 
         
-        //Label for motto
         //Label for motto
         JLabel CMotto = new JLabel("<html>...we make the sky, <br/>feel like</html>");
         CMotto.setBounds(1185,5,300,90);
@@ -75,7 +72,7 @@ public class Devs
         Devs.add(Clogo1);        
         
         //Label Declaration for coloured background only for the Header
-        JLabel Header= new JLabel("");
+        JLabel Header = new JLabel("");
         Header.setBounds(0,0,5000,100);
         Header.setOpaque(true);
         Header.setBackground(c1);
@@ -87,7 +84,6 @@ public class Devs
         VerDiv.setOpaque(true);
         VerDiv.setBackground(c1);
         Devs.add(VerDiv);
-
 
         //Label that Divides Horizontally
         VerDiv = new JLabel();
@@ -138,7 +134,6 @@ public class Devs
         MeetT.setForeground(Color.BLACK);
         Devs.add(MeetT);      
         
-
         //Meet the Devs underline
         MeetU = new JLabel();
         MeetU.setBounds(650 , 180 ,260 , 5);
@@ -185,6 +180,7 @@ public class Devs
 
     }
     
+    //Holds all the button present in the frame
     public void AllButtons()
     {
         btnBack = new JButton("🏠 HOME");
@@ -195,14 +191,14 @@ public class Devs
         Devs.add(btnBack);
     }
     
+    //function that holds all the functionality of the action listeners
     public void AllActionListener()
     {
-          //Go Back tp Home page
+          //Go Back to Home page
        btnBack.addActionListener(new ActionListener() 
         {
             public void actionPerformed(ActionEvent e)
             {
-                
                 Devs.setVisible(false); 
                 new HomePage();
             }
@@ -213,18 +209,16 @@ public class Devs
     //Initializes the frame  
     public void DisplayFrame()
     {
+        
      Devs = new JFrame("Devs");
      Devs.setExtendedState(JFrame.MAXIMIZED_BOTH);
-     //Devs.setResizable(false);
     
-    //Calling appropriate function to set up the frame      
+    //Calling appropriate functions to set up the frame      
      AllLabels();
      AllButtons();
      AllActionListener();
 
      Devs.getContentPane().setBackground(c3);
-    
-    
      Devs.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
      Devs.setLayout(null);
      Devs.setVisible(true);
@@ -234,8 +228,8 @@ public class Devs
     
    //Function called by the actionListener in HomePage
    public void ShowDevs()
-   { 
-    DisplayFrame();
+   {    
+     DisplayFrame();   
    }
    
 }

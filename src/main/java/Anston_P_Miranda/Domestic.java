@@ -1,12 +1,14 @@
 
-package Anston_P_Miranda;
+package Anston_P_Miranda;//USER DEFINED PACKAGES
 
 //All the required imports
-import Ashwin_R_Prabhu.HomePage;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.Random;
 import javax.swing.*;
+
+//IMPORTING USER DEFINED PACKAGES
+import Ashwin_R_Prabhu.HomePage;
 
 /**
  *
@@ -84,7 +86,6 @@ public class Domestic extends Flight
        
         //action listener for Search button
         btnSearch.addActionListener(new ActionListener(){
-            @Override
             public void actionPerformed(ActionEvent e)
             {
                 //show error if source and destination are same
@@ -113,7 +114,6 @@ public class Domestic extends Flight
         
         //action listener for Reset search button
         Res.addActionListener(new ActionListener(){
-            @Override
             public void actionPerformed(ActionEvent e)
             {                
                 Booking.setVisible(false); 
@@ -166,7 +166,6 @@ public class Domestic extends Flight
 
             //action listener for Try again button
             btnTry.addActionListener(new ActionListener(){
-            @Override
             public void actionPerformed(ActionEvent e)
             {
                 Booking.remove(btnTry);

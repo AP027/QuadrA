@@ -1,5 +1,5 @@
-
-package Anston_P_Miranda;
+ 
+package Anston_P_Miranda;//USER DEFINED PACKAGES
 
 
 import java.awt.Color;
@@ -7,6 +7,7 @@ import java.awt.Font;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
+//IMPORTING USER DEFINED PACKAGES
 import Adithya_K_Shetty.MyAccount;
 import Ashwin_R_Prabhu.*;
 
@@ -577,7 +578,7 @@ public class Introduction //Introduction class animation
     public static void main(String[] args) throws InterruptedException
     {
                
-        new Introduction();//Program start call
+        new SignIn();//Program start call
         MyAccount.starttime=System.currentTimeMillis();//Initializer for timer
         MyAccount.timer();//Call for timer function
         

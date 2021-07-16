@@ -1,10 +1,12 @@
 
-package Anston_P_Miranda;
+package Anston_P_Miranda;//USER DEFINED PACKAGES
 
-import Ashwin_R_Prabhu.HomePage;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+
+//IMPORTING USER DEFINED PACKAGES
+import Ashwin_R_Prabhu.HomePage;
 
 /**
  *
@@ -66,7 +68,6 @@ public class Flight extends JFrame
         
         //Action Listner for Home button that calls Homepage constructor       
         Home.addActionListener(new ActionListener(){
-            @Override
             public void actionPerformed(ActionEvent e)
             {
                 new HomePage();

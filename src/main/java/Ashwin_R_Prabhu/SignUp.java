@@ -3,14 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Ashwin_R_Prabhu;
+package Ashwin_R_Prabhu;//USER DEFINED PACKAGES
 
 
 import java.awt.*; 
 import java.awt.event.*; 
 import javax.swing.*;
-import Anston_P_Miranda.Flight;
 
+//IMPORTING USER DEFINED PACKAGES
+import Anston_P_Miranda.Flight;
 import static Ashwin_R_Prabhu.SignIn.supbtn;
 
 /**
@@ -67,11 +68,17 @@ public class SignUp implements ActionListener{ //Implement part is because actio
         
         
         //Firstname Label & TextField
-        fnamelb = new JLabel("Firstname:");
+        fnamelb = new JLabel("Firstname  :");
         fnamelb.setBounds(30,20,1000,30);
         fnamelb.setForeground(c2);
         fnamelb.setFont(new Font("",Font.BOLD,20));
         supfrm.add(fnamelb);
+        
+        JLabel fnamelb1 = new JLabel("*");
+        fnamelb1.setBounds(127,20,1000,30);
+        fnamelb1.setForeground(GR);
+        fnamelb1.setFont(new Font("",Font.BOLD,20));
+        supfrm.add(fnamelb1);
 
         fnametxt = new JTextField();
         fnametxt.setBounds(150,20,200,40);
@@ -80,7 +87,7 @@ public class SignUp implements ActionListener{ //Implement part is because actio
         
         
         //Lastname Label & TextField
-        lnamelb = new JLabel("Lastname:");
+        lnamelb = new JLabel("Lastname :");
         lnamelb.setBounds(30,100,1000,30);
         lnamelb.setForeground(c2);
         lnamelb.setFont(new Font("",Font.BOLD,20));
@@ -93,11 +100,19 @@ public class SignUp implements ActionListener{ //Implement part is because actio
         
         
         //Username Label & TextField
-        unamelb = new JLabel("Username:");
+        unamelb = new JLabel("Username  :");
         unamelb.setBounds(30,180,1000,30);
         unamelb.setForeground(c2);
         unamelb.setFont(new Font("",Font.BOLD,20));
         supfrm.add(unamelb);
+        
+        JLabel unamelb1 = new JLabel("*");
+        unamelb1.setBounds(127,180,1000,30);
+        unamelb1.setForeground(GR);
+        unamelb1.setFont(new Font("",Font.BOLD,20));
+        supfrm.add(unamelb1);
+        
+        
 
         unametxt = new JTextField();
         unametxt.setBounds(150,180,200,40);
@@ -106,11 +121,17 @@ public class SignUp implements ActionListener{ //Implement part is because actio
         
         
         //Password Label & TextField
-        passlb = new JLabel("Password:");
+        passlb = new JLabel("Password  :");
         passlb.setBounds(30,260,1000,30);
         passlb.setForeground(c2);
         passlb.setFont(new Font("",Font.BOLD,20));
         supfrm.add(passlb);
+        
+        JLabel passlb1 = new JLabel("*");
+        passlb1.setBounds(127,260,1000,30);
+        passlb1.setForeground(GR);
+        passlb1.setFont(new Font("",Font.BOLD,20));
+        supfrm.add(passlb1);
        
         passtxt = new JPasswordField();
         passtxt.setBounds(150,260,200,40);
